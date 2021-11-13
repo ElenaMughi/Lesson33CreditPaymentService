@@ -1,11 +1,11 @@
 public class CreditPaymentService {
-    public int calculate(int CreditSum, float Percent, int PeriodInMonth) {
+    public int calculate(int creditsum, float percent, int periodinmonth) {
 
-        double Х = Math.pow(1 + Percent, PeriodInMonth);
-        double Coefficient = Percent * Х / (Х - 1);
-        double MonthlyPaiment = Coefficient * CreditSum;
+        double x = Math.pow(1 + percent, periodinmonth);
+        double coefficient = percent * x / (x - 1);
+        double monthlypaiment = coefficient * creditsum;
 
-        return (int) MonthlyPaiment;
+        return (int) monthlypaiment;
     }
 }
 //        Формула расчёта суммы ежемесячного платежа при аннуитетной схеме погашения следующая:
